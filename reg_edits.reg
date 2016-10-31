@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\OpenVPN-GUI] 
+"log_dir"="REG_DWORD:%temp%\OpenVPN\log"
