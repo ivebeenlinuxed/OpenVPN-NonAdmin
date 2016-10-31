@@ -2,7 +2,5 @@ Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\OpenVPN-GUI] 
 "log_dir"="REG_DWORD:%temp%\OpenVPN\log"
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\OpenVPN-GUI]
 "editor"="REG_DWORD:C:\ProgramData\OpenVPN\notallowed.exe"
 "log_viewer="REG_DWORD:C:\ProgramData\OpenVPN\notallowed.exe"
