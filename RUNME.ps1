@@ -5,7 +5,7 @@ if (-Not $(Test-Path C:\ProgramData\OpenVPN\create_usertask.cmd)) {
 
 Invoke-WebRequest https://raw.githubusercontent.com/ivebeenlinuxed/OpenVPN-NonAdmin/master/create_main_task_only_runonce.cmd -OutFile $env:temp/create_main_task_only_runonce.cmd
 
-$env:temp/create_main_task_only_runonce.cmd
+powershell -Command "$env:temp/create_main_task_only_runonce.cmd"
 
 Remove-Item $env:temp/create_main_task_only_runonce.cmd
 
