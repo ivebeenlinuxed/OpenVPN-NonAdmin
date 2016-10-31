@@ -1,4 +1,4 @@
-if (-Not Test-Path C:\ProgramData\OpenVPN\create_usertask.cmd) {
+if (-Not $(Test-Path C:\ProgramData\OpenVPN\create_usertask.cmd)) {
   New-Item C:\ProgramData\OpenVPN\ -ItemType Directory;
   Invoke-WebRequest https://raw.githubusercontent.com/ivebeenlinuxed/OpenVPN-NonAdmin/master/create_usertask.cmd -OutFile C:\ProgramData\OpenVPN\create_usertask.cmd
 }
