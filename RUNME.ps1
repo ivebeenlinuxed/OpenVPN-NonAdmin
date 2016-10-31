@@ -3,7 +3,7 @@ if (-Not $(Test-Path C:\ProgramData\OpenVPN\create_usertask.cmd)) {
   Invoke-WebRequest https://raw.githubusercontent.com/ivebeenlinuxed/OpenVPN-NonAdmin/master/create_usertask.cmd -OutFile C:\ProgramData\OpenVPN\create_usertask.cmd
 }
 
-Invoke-WebRequest https://github.com/ivebeenlinuxed/OpenVPN-NonAdmin/blob/master/create_main_task_only_runonce.cmd -OutFile $env:temp/create_main_task_only_runonce.cmd
+Invoke-WebRequest https://raw.githubusercontent.com/ivebeenlinuxed/OpenVPN-NonAdmin/master/create_main_task_only_runonce.cmd -OutFile $env:temp/create_main_task_only_runonce.cmd
 
 $env:temp/create_main_task_only_runonce.cmd
 
@@ -18,6 +18,6 @@ Get-Process openvpn-gui | stop-process
 
 HKEY_LOCAL_MACHINE\SOFTWARE\OpenVPN-GUI\log_dir
 
-Invoke-WebRequest https://github.com/ivebeenlinuxed/OpenVPN-NonAdmin/blob/master/reg_edits.reg -OutFile $env:temp/openvpn_edits.reg
+Invoke-WebRequest https://raw.githubusercontent.com/ivebeenlinuxed/OpenVPN-NonAdmin/master/reg_edits.reg -OutFile $env:temp/openvpn_edits.reg
 
 regedit $env:temp/openvpn_edits.reg
