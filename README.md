@@ -10,6 +10,9 @@ That's it!
 To uninstall
 
 1) Delete the scheduled tasks
+
 2) Uninstall OpenVPN
 
 Patches Welcome
+
+Credits to Wiki Guide: http://community.openvpn.net/openvpn/wiki/Nonprivileged (This just automates all these steps!)
