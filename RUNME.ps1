@@ -11,12 +11,10 @@ Remove-Item $env:temp/create_main_task_only_runonce.cmd
 
 Invoke-WebRequest https://swupdate.openvpn.org/community/releases/openvpn-install-2.3.12-I602-x86_64.exe -OutFile $env:temp/openvpn-installer.exe
 
-$env:temp/openvpn-installer.exe /s
+powershell -Command "$env:temp/openvpn-installer.exe /S"
 
-Start-Process -FilePath C:\Program Files\OpenVPN\bin\openvpn-gui.exe
+Start-Process -FilePath "C:\Program Files\OpenVPN\bin\openvpn-gui.exe"
 Get-Process openvpn-gui | stop-process
-
-HKEY_LOCAL_MACHINE\SOFTWARE\OpenVPN-GUI\log_dir
 
 Invoke-WebRequest https://raw.githubusercontent.com/ivebeenlinuxed/OpenVPN-NonAdmin/master/reg_edits.reg -OutFile $env:temp/openvpn_edits.reg
 
